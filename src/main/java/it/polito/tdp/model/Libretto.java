@@ -36,6 +36,7 @@ public class Libretto {
 		for(Voto v : this.voti) {
 			if(v.getVoto()==punteggio) {
 				risultato.add(v);
+				
 			}
 		}
 		return risultato;
@@ -47,11 +48,29 @@ public class Libretto {
 		for(Voto v : this.voti) {
 			if(v.getVoto()==punteggio) {
 				risultato.add(v);
+				//risultato.voti.add(v);
 			}
 		}
 		return risultato;
 	}
 	
+	
+	/**
+	 * Ricerca un Voto del corso di cui è specificato il nome
+	 * Se il corso non esiste , restituisce null
+	 * @param nomeCorso
+	 * @return
+	 */
+	public Voto ricercaCorso(String nomeCorso) {
+		Voto risultato = null;
+		for(Voto v : this.voti) {
+			if(v.getNome().equals(nomeCorso)) {
+				risultato = v ;
+				break;
+			}
+		}
+		return risultato;
+	}
 	
 	
 	public String toString () {
@@ -61,16 +80,6 @@ public class Libretto {
 		}
 		return s;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 
 }

@@ -27,6 +27,9 @@ public class TestLibretto {
 		
 		Libretto librettoVenticinque = libretto.votiUguali(25);
 		System.out.println(librettoVenticinque);
+		
+		Voto v = libretto.ricercaCorso("Analisi 1");
+		System.out.println(v);
 	
 	
 	}
