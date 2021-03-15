@@ -31,6 +31,13 @@ public class TestLibretto {
 		Voto v = libretto.ricercaCorso("Analisi 1");
 		System.out.println(v);
 	
+		
+		Voto chimica = libretto.ricercaCorso("Chimica");
+		Voto chimica_doppio= new Voto("Chimica",25,LocalDate.of(2019, 9, 15));
+		Voto chimica_conflitto = new Voto("Chimica",29,LocalDate.of(2019, 9, 15));
+		System.out.println(chimica + " doppione di "+chimica_doppio + "? -> "+libretto.esisteDuplicato(chimica_doppio));
+		System.out.println(chimica + " doppione di "+chimica_conflitto + "? -> "+libretto.esisteDuplicato(chimica_conflitto));
+
 	
 	}
 	
